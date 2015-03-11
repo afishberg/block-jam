@@ -1,6 +1,6 @@
 PImage mkTexture(PImage img, int gw, int gh) {
-  int w = gridW(gw);
-  int h = gridH(gh);
+  int w = gridWH(gw);
+  int h = gridWH(gh);
   
   int randX = (int)random(img.width - w);
   int randY = (int)random(img.height - h);
@@ -12,8 +12,8 @@ PImage mkTexture(PImage img, int gw, int gh) {
 }
 
 PImage mkMask(int gw, int gh) {
-  int w = gridW(gw);
-  int h = gridH(gh);
+  int w = gridWH(gw);
+  int h = gridWH(gh);
   
   PGraphics pg = createGraphics(w, h);
   pg.beginDraw();
@@ -27,8 +27,8 @@ PImage mkMask(int gw, int gh) {
 }
 
 PImage mkOutline(color c, int gw, int gh) {
-  int w = gridW(gw);
-  int h = gridH(gh);
+  int w = gridWH(gw);
+  int h = gridWH(gh);
   
   PGraphics pg = createGraphics(w, h);
   pg.beginDraw();

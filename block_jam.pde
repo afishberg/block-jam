@@ -67,6 +67,7 @@ void draw() {
   draw_grid();
   draw_field();
   draw_blocks();
+  draw_held();
 }
 
 

@@ -86,3 +86,12 @@ void draw_grid() {
     stepX = (stepX == FIELD_GAP ? FIELD_SPACE : FIELD_GAP);
   } 
 }
+
+void draw_held() {
+  if (pieceHold) {
+    draw_block(piece,
+                  bound(mouseXGrid(), gridX_min, gridX_max),
+                  bound(mouseYGrid(), gridY_min, gridY_max)
+              );
+  }
+}
